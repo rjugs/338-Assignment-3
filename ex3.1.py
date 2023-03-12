@@ -46,6 +46,11 @@ def evaluate_expression(expression):
     
 #main
 
+if "\'" in sys.argv[1]:
+    print("The commandline input expression must be surrounded by double quotes.")
+    print("Example: \"(+ 1 5 )\"")
+    sys.exit(1)
+
 print(sys.argv[1])
 
 result = evaluate_expression(sys.argv[1])
