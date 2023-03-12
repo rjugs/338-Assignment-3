@@ -5,13 +5,15 @@
 # 3. Using the stack, compute the overall result of an expression [6 pts].
 
 
+# READ ME -> the command line variable must be surrounded by double quotes for this implementation. Example: "(+ 1 5)"
+
 import sys
 import re
 
 def evaluate_expression(expression):
     stack = []
     expressionValues = re.findall(r'\(|\)|[-+]?\d*\.\d+|\d+|[+\-*/]|\S+', expression)
-    #print(expressionValues)
+   # print(expressionValues)
 
     for val in expressionValues:
         
@@ -44,7 +46,7 @@ def evaluate_expression(expression):
     
 #main
 
-#print(sys.argv[1])
+print(sys.argv[1])
 
 result = evaluate_expression(sys.argv[1])
 resultToPrint = str(result)
